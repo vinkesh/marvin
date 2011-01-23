@@ -1,3 +1,4 @@
+require 'rubygems'
 require 'marvin'
 
 class One
@@ -24,5 +25,5 @@ class Two
   end
 end
 
-bot = Marvin::Android.new("banka.bot@gmail.com", "botclient")
+bot = Marvin::Android.new("some_chat_bot@gmail.com", "some_password")
 bot.listen
