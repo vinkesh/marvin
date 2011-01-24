@@ -1,6 +1,13 @@
 = marvin
 
-Description goes here.
+Marvin is a plugin to easily host your own Jabber Chat bot. It uses XMPP4R library internally.
+
+== USAGE
+
+	gem build marvin.gemspec
+	gem install marvin
+
+Check basic.rb in examples folder to see the usage
 
 == Contributing to marvin
  
