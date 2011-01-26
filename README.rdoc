@@ -11,6 +11,9 @@ Download the latest code from github.
 To create a keyword for the bot, generate a new class, and just include Marvin::Handler. Add the command regex, syntax and the description ( these will
 be used by help command to generate a list of all keywords ). Add the handle method, which will be called if the incoming body matches the regex. Example - 
 
+	require 'rubygems'
+	require 'marvin'
+	
 	class SomeKeyword
 	  include Marvin::Handler
 	  
