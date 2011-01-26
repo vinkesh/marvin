@@ -1,13 +1,40 @@
-= marvin
+= Marvin
 
-Marvin is a plugin to easily host your own Jabber Chat bot. It uses XMPP4R library internally.
+Marvin is a plugin/gem to easily host your own Jabber Chat bot. It uses XMPP4R library internally.
 
 == USAGE
 
+Download the latest code from github.
 	gem build marvin.gemspec
 	gem install marvin
 
-Check basic.rb in examples folder to see the usage
+To create a keyword for the bot, generate a new class, and just include Marvin::Handler. Add the command regex, syntax and the description ( these will
+be used by help command to generate a list of all keywords ). Add the handle method, which will be called if the incoming body matches the regex. Example - 
+
+	class SomeKeyword
+	  include Marvin::Handler
+	  
+	  command :regex => /keyword/, :syntax => "keyword", :description => "Does nothing"
+	  
+	  def handle(from, body, bot)
+	    # from - is the Jabbed User_Id from where the message came
+	    # body - is the body of the message
+	    # bot  - is the object, which can be used to reply to the user.
+	    
+	    # do something here
+	    puts "I m doing nothing"
+	    bot.reply( from, "I have done nothing")
+	  end
+	end
+
+To start the bot,
+
+	bot = Marvin::Android.new("user_id@host.com", "password")
+	bot.listen
+
+This will start listening for the incoming messages and handle them.
+
+Check basic.rb in examples folder to see the usage.
 
 == Contributing to marvin
  
