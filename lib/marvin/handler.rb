@@ -10,7 +10,7 @@ module Marvin
       end
 
       def help
-        "#{@syntax} :: #{@description}"
+        "*#{@syntax}* :: #{@description}"
       end
 
       def should_handle_for? message_body
