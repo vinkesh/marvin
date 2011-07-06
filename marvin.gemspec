@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Vinkesh Banka"]
+  s.authors = ["Vinkesh banka"]
   s.date = %q{2011-01-23}
   s.description = %q{Marvin handles vanilla code to create your own chat bot. You just need to plug in your commands.}
   s.email = %q{vinkesh.banka@gmail.com}
